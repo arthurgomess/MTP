@@ -1,0 +1,16 @@
+#include <stdlib.h>
+#include <stdio.h>
+
+int main ()
+{
+    printf("\t\t\t\tArea do triangulo\n\n");
+    float area,base,altura;
+
+    printf("Insira o valor da base do triangulo e da altura seguida de um espaco: \n");
+    scanf("%f",&base);
+    scanf("%f",&altura);
+    area = (altura*base)/2;
+    printf("\nO valor da area do triangulo e: %.2f unidades de area\n\n",area);
+
+    return 0;
+}

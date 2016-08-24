@@ -1,0 +1,18 @@
+#include <stdio.h>
+int fat(int n)
+{
+	if (n >= 1)
+  	  return n*fat(n-1);
+	else
+        return 1;
+}
+
+int main()
+{
+    printf("\t\t\t\tFatorial\n\n");
+	int n;
+	printf("Digite um valor inteiro e nao negativo: ");
+	scanf("%d", &n);
+	printf("\n\n\nO fatorial de %d e %d", n, fat(n));
+	return 0;
+}

@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main()
+{
+    printf("\t\t\t\tPotencia\n\n");
+    int n,k,valor=1,i;
+    printf("Digite uma base inteira e uma potencia seguidos de um espaco entre cada:\n");
+    scanf("%d", &n);
+    scanf("%d", &k);
+    for (i=0; i<k; i++)
+    {
+        valor *= n;
+    }
+    printf("\n\n\nO valor de %d elevado a %d e: %d", n, k, valor);
+           return 0;
+}

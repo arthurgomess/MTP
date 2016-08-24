@@ -1,0 +1,31 @@
+#include <stdlib.h>
+#include <stdio.h>
+
+int main ()
+{
+    printf("\t\t\t\tVerificacao de primo\n\n");
+    int num,aux,ndiv=1;
+
+    printf("Insira um numero: ");
+    scanf("%d",&num);
+    aux = num;
+
+    while (aux > 1)
+    {
+        if(num%aux == 0)
+            ndiv++;
+        aux--;
+    }
+
+
+    if(num == 1 || ndiv <= 2)
+    {
+        printf("O numero %d e primo.\n\n\n",num);
+    }
+    else
+    {
+        printf("O numero %d nao e primo.\n\n\n",num);
+    }
+
+    return 0;
+}

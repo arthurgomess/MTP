@@ -1,0 +1,15 @@
+#include <stdlib.h>
+#include <stdio.h>
+
+int main ()
+{
+    printf("\t\t\t\tArea do quadrado\n\n");
+    float area,lado;
+
+    printf("Insira o valor do lado do quadrado: ");
+    scanf("%f",&lado);
+    area = lado*lado;
+    printf("\nO valor da area do quadrado e: %.2f unidades de area\n\n",area);
+
+    return 0;
+}
