@@ -1,24 +1,23 @@
 #include <stdio.h>
 
-int main (){
-
-    int a, b, soma;
-    unsigned char * ponteiro1 = NULL;
-    unsigned char * ponteiro2 = NULL;
-    unsigned char * ponteiro3 = NULL;
-
-    printf("Entre com o valor de a e b\n\n");
-    scanf("%s", &a);
-    scanf("%s", &b);
-
-    soma=a+b;
-    ponteiro1=&a;
-    ponteiro2=&a;
-    ponteiro3=&soma;
-
-    printf ("%p : %s\n", ponteiro1, a);
-    printf ("%p : %s\n", ponteiro2, b);
-    printf ("%p : %s\n", ponteiro3, soma);
-
-    return 0;
+int main(){
+	
+	int a, b, soma;
+	int *a1,*b1,*soma1;
+	
+	printf ("Entre com dois numeros:\n");
+	scanf("%d", &a);
+	scanf("%d", &b);
+	
+	soma=a+b;
+	
+	a1 = &a;
+	b1 = &b;
+	soma1 = &soma;
+	
+	printf("\nDado: %d e Endereco: %p", a, a1);
+	printf("\nDado: %d e Endereco: %p", b, b1);
+	printf("\nDado: %d e Endereco: %p\n\n", soma, soma1);
+	
+	return 0;
 }
