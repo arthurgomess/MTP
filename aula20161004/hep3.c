@@ -2,33 +2,45 @@
 #include <stdlib.h>
 
 
-void recebetxt(char * texto);
-
+char * inicializatxt();
+char * recebetexto(char * texto);
 int main()
 {
-    char * texto =malloc(sizeof(char));
-    texto[0]='\0';
-
-    printf("Entre com um texto: \n");
-    recebetxt(texto);
-    printf("\n%s\n", texto);
+    char * texto;
+    texto= inicializatxt();
+    printf ("   Entre com um txt, se desejar sair aperte '#'+ENTER para sair           \n");
+    texto=recebetexto(texto);
+    printf("\n          O que tem na HEAP            \n");
+    printf("%s\n", texto);
+    free(texto);
 
     return 0;
 }
 
-void recebetxt(char * texto)
+char * inicializatxt()
 {
-    int c, tamanho=strlen(texto);
+    char * texto;
+    texto= (char *) malloc(sizeof(char));
+    texto[0]='\0';
+    return texto;
+}
 
+char * recebetexto(char * texto)
+{
+    int c, tamanho=0;
     do
     {
-        c=getchar();
+        c= getchar();
         if(c!='#')
         {
-            texto[tamanho]=c;
             tamanho++;
-            texto = realloc(texto,(tamanho+1)*sizeof(char));
+            texto=(char *) realloc(texto, (tamanho+1)*sizeof(char));
             texto[tamanho]='\0';
+            texto[tamanho-1]=c;
         }
-    }while (c!='#');
+
+
+    }while(c!='#');
+
+    return texto;
 }
